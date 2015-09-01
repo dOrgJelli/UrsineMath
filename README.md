@@ -1,7 +1,10 @@
 # UrsineMath
-UrsineMath is a SIMD (Single Instruction Multiple Data) accelerated linear math library.  It is a research project at heart, and is still very much so a work in progress.  Also this marked my first attempt tinkering with SIMD related.
+UrsineMath is a small linear math library with SIMD (Single Instruction Multiple Data) optimizations.  It is a research project at heart, and is still very much so a work in progress.
 
-UrsineMath utilizes SSE intrinsics up to 4.1.
+Features Include:
+- SSE4.1 intrinsics and below
+- Vector, Matrix, Quaternion classes
+- Extensive (and redundant at times) test suite
 
 These math libraries served as great learning resources and sources of inspiration:
 https://github.com/bulletphysics/bullet3/tree/master/src/LinearMath
