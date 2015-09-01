@@ -7,6 +7,6 @@ Features Include:
 - Extensive (and redundant at times) test suite
 
 These math libraries served as great learning resources and sources of inspiration:
-https://github.com/bulletphysics/bullet3/tree/master/src/LinearMath
-http://clb.demon.fi/MathGeoLib/nightly/
-https://msdn.microsoft.com/en-us/library/windows/desktop/hh437833(v=vs.85).aspx
+- https://github.com/bulletphysics/bullet3/tree/master/src/LinearMath
+- http://clb.demon.fi/MathGeoLib/nightly/
+- https://msdn.microsoft.com/en-us/library/windows/desktop/hh437833(v=vs.85).aspx
