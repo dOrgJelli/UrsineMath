@@ -20,16 +20,16 @@
 
 namespace Ursine
 {
-	class SMat3;
-	class SVec3;
-	class SMat4;
+    class SMat3;
+    class SVec3;
+    class SMat4;
 
     class SQuat : public SVec4
     {        
-		friend class SMat4;
+        friend class SMat4;
 
-	private:
-		void set(const SMat3 &mat);
+    private:
+        void set(const SMat3 &mat);
 
     public:
         // Constructors
@@ -37,7 +37,7 @@ namespace Ursine
         SQuat(const SVec3 &from, const SVec3 &to);
         SQuat(float x_angle, float y_angle, float z_angle);
         SQuat(float X, float Y, float Z, float W);
-		explicit SQuat(const SMat3 &rotationMatrix);
+        explicit SQuat(const SMat3 &rotationMatrix);
 
         // Properties
         static const SQuat &Identity(void);
@@ -65,10 +65,10 @@ namespace Ursine
         void SetAngleAxis(float angle, const SVec3 &axis);
 
         // Set the euler angle rotation (X, Y, Z)
-		void SetEulerAngles(const SVec3 &euler);;
+        void SetEulerAngles(const SVec3 &euler);;
 
-		// Get the euler angles this rotation represents (X, Y, Z)
-		SVec3 GetEulerAngles(void) const;
+        // Get the euler angles this rotation represents (X, Y, Z)
+        SVec3 GetEulerAngles(void) const;
 
         // Represent a rotation FROM a vec -> TO a vec
         void SetFromTo(const SVec3 &from, const SVec3 &to);
@@ -81,16 +81,16 @@ namespace Ursine
         SQuat Slerp(const SQuat &other, float t) const;
         void Slerp(const SQuat &other, float t, SQuat &result) const;
 
-		// Spherical linear interpolation betweeen two given vectors
-		// if t == 0, the result is from, if t == 1, the result is to.
-		static SVec3 SlerpVector(const SVec3 &from, const SVec3 &to, float t);
+        // Spherical linear interpolation betweeen two given vectors
+        // if t == 0, the result is from, if t == 1, the result is to.
+        static SVec3 SlerpVector(const SVec3 &from, const SVec3 &to, float t);
 
         // Rotate a given vector by this quaternion
         SVec3 Rotate(const SVec3 &vec);
         void Rotate(const SVec3 &vec, SVec3 &result);
 
         // A LookAt quaternion is a quaternion that orients an object to face towards a specified target direction.
-		void SetLookAt(const SVec3 &targetDirection, const SVec3 &localForward, const SVec3 &localUp, const SVec3 &worldUp);
+        void SetLookAt(const SVec3 &targetDirection, const SVec3 &localForward, const SVec3 &localUp, const SVec3 &worldUp);
 
         // Create a LookAt quaternion
         static SQuat LookAt(const SVec3 &targetDirection, const SVec3 &localForward, const SVec3 &localUp, const SVec3 &worldUp);
@@ -100,6 +100,6 @@ namespace Ursine
         SQuat operator*(const SQuat &rhs);
         SVec3 operator*(const SVec3 &rhs);
 
-		ALLOW_ALIGNED_ALLOC(16)
+        ALLOW_ALIGNED_ALLOC(16)
     };
 }

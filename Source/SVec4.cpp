@@ -51,6 +51,6 @@ namespace Ursine
                 y_cvt.str() + ", " +
                 z_cvt.str() + ", " +
                 w_cvt.str() +
-				"}" };
+                "}" };
     }
 }
