@@ -10,3 +10,7 @@ These math libraries served as great learning resources and sources of inspirati
 - https://github.com/bulletphysics/bullet3/tree/master/src/LinearMath
 - http://clb.demon.fi/MathGeoLib/nightly/
 - https://msdn.microsoft.com/en-us/library/windows/desktop/hh437833(v=vs.85).aspx
+
+Target Platforms:
+- Windows (MSVC)
+- OS X & Linux (GCC/Clang)
