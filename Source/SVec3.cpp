@@ -12,55 +12,56 @@
 ** -------------------------------------------------------------------------*/
 
 #include "SVec3.h"
-#include "SVec4.h"
 #include "Vec2.h"
+#include "SVec4.h"
 #include <sstream>
 
-namespace Ursine
+namespace ursine
 {
-    SVec3::SVec3(const Vec2 &value, float Z)
-            : x(value.X())
-            , y(value.Y())
-            , z(Z)
-    {
+	SVec3::SVec3(const Vec2 &value, float Z)
+		: m_x( value.X( ) )
+		, m_y( value.Y( ) )
+		, m_z( Z )
+	{
 #ifdef USE_SSE
-        w = 0.0f;
+		m_w = 0.0f;
 #endif
-    }
+	}
 
-    SVec3::SVec3(const SVec4 &value)
-            : x(value.X())
-            , y(value.Y())
-            , z(value.Z())
-    {
+	SVec3::SVec3(const SVec4 &value)
+		: m_x( value.X( ) )
+		, m_y( value.Y( ) )
+		, m_z( value.Z( ) )
+	{
 #ifdef USE_SSE
-        w = 0.0f;
+		m_w = 0.0f;
 #endif
-    }
+	}
 
-    // Public Methods
-    void SVec3::Clean(void)
-    {
-        x = Math::IsZero(x) ? 0.0f : x;
-        y = Math::IsZero(y) ? 0.0f : y;
-        z = Math::IsZero(z) ? 0.0f : z;
-    }
+	// Public Methods
+	void SVec3::Clean(void)
+	{
+		m_x = math::IsZero( m_x ) ? 0.0f : m_x;
+		m_y = math::IsZero( m_y ) ? 0.0f : m_y;
+		m_z = math::IsZero( m_z ) ? 0.0f : m_z;
+	}
 
-    std::string SVec3::ToString(void) const
-    {
-        std::ostringstream x_cvt;
-        x_cvt << x;
+	std::string SVec3::ToString(void) const
+	{
+		std::ostringstream x_cvt;
+		x_cvt << m_x;
 
-        std::ostringstream y_cvt;
-        y_cvt << y;
+		std::ostringstream y_cvt;
+		y_cvt << m_y;
 
-        std::ostringstream z_cvt;
-        z_cvt << z;
+		std::ostringstream z_cvt;
+		z_cvt << m_z;
 
-        return{ "{" +
-                x_cvt.str() + ", " +
-                y_cvt.str() + ", " +
-                z_cvt.str() +
-                "}" };
-    }
+		return { "{" +
+			x_cvt.str( ) + ", " +
+			y_cvt.str( ) + ", " +
+			z_cvt.str( ) +
+			"}" 
+		};
+	}
 }

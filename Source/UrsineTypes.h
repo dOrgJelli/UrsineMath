@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 ** Team Bear King
-** DigiPen Institute of Technology 2014
+** © 2015 DigiPen Institute of Technology, All Rights Reserved.
 **
 ** UrsineTypes.h
 **
@@ -15,7 +15,7 @@
 
 #include <stdint.h>
 
-namespace Ursine
+namespace ursine
 {
     typedef uint64_t uint64;
     typedef uint32_t uint32;

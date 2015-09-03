@@ -16,20 +16,20 @@
 #include <math.h>
 #include <stdlib.h>
 
-namespace Ursine
+namespace ursine
 {
-    namespace Math
+    namespace math
     {
         template<typename T>
         inline bool IsZero(T value)
         {
-            return (value <= Math::Epsilon) && (value >= -Math::Epsilon);
+            return (value <= math::Epsilon) && (value >= -math::Epsilon);
         }
 
         template<typename T1, typename T2>
         inline bool IsEqual(T1 a, T2 b)
         {
-            return ((a >= b) ? (a - b) : (b - a)) < Math::Epsilon;
+            return ((a >= b) ? (a - b) : (b - a)) < math::Epsilon;
         }
 
         // for use on doubles and floats
@@ -117,12 +117,14 @@ namespace Ursine
 
         inline float RadiansToDegrees(float radians)
         {
-            return radians * 180 / PI;
+			static const float scalar = 180.0f / PI;
+            return radians * scalar;
         }
 
         inline float DegreesToRadians(float degrees)
         {
-            return degrees * PI / 180;
+			static const float scalar = PI / 180.0f;
+            return degrees * scalar;
         }
     }
 }

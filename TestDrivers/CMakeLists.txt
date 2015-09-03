@@ -36,6 +36,10 @@ set(VECTOR_TEST_SRC_FILES ${SHARED_SRC_FILES} ${CATCH_SRC_FILES}
 set(MATRIX_TEST_SRC_FILES ${SHARED_SRC_FILES} ${CATCH_SRC_FILES}
     MatrixLibTests.cpp)
 
+set(QUATERNION_TEST_SRC_FILES ${SHARED_SRC_FILES} ${CATCH_SRC_FILES}
+    QuaternionTests.cpp)
+
 # test driver build target
 add_executable(UrsineMath-VectorTestDriver ${VECTOR_TEST_SRC_FILES})
 add_executable(UrsineMath-MatrixTestDriver ${MATRIX_TEST_SRC_FILES})
+add_executable(UrsineMath-QuaternionTestDriver ${QUATERNION_TEST_SRC_FILES})

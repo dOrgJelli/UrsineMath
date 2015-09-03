@@ -15,9 +15,9 @@
 
 #include <limits>
 
-namespace Ursine
+namespace ursine
 {
-    namespace Math
+    namespace math
     {
         const float Epsilon = 0.0001f;
         const float PI = 3.14159265f;
